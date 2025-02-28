@@ -1,7 +1,9 @@
+echo "enter the directory: "
 
-#!/bin/bash
-for file in *
-do
-	echo $file
+read dir
+
+for file in "$dir"/*; do
+        echo "$file"
 done
+
 
