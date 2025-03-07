@@ -2,16 +2,13 @@
 
 is_palindrome() {
     str=$1
-    len=${#str}
-
-    for (( i=0; i<len/2; i++ ))
-    do
-        if [ "${str:i:1}" != "${str:len-i-1:1}" ]; then
-            echo "The string '$str' is NOT a palindrome."
-            return
-        fi
-    done
-    echo "The string '$str' IS a palindrome."
+    reversed_str=$(echo $str | rev)
+    
+    if [ "$str" == "$reversed_str" ]; then
+        echo "The string '$str' IS a palindrome."
+    else
+        echo "The string '$str' is NOT a palindrome."
+    fi
 }
 
 read -p "Enter a string: " input_str
