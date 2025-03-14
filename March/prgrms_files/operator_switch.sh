@@ -1,4 +1,6 @@
-echo "enter second number: "
+echo "Enter First number: "
+read num1
+echo "Enter second number: "
 read num2
 
 echo "enter opeartions: +,-,*,/: "
